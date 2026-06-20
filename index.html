@@ -19,6 +19,8 @@
 
     <h3>Rank: <span id="echoRank">E</span></h3>
 
+    <h3 id="nextRankText">Next Rank: —</h3>
+
     <h3 class="echo-total">Total Echoes: <span id="echoTotal">0</span> / <span class="echo-max">140</span></h3>
 
     <div class="progress-bar"><div id="progressFill"></div></div>
@@ -28,38 +30,38 @@
 
 
     <ul id="echoChecklist">
-        <li><label><input type="checkbox" data-echo="1"><span>[1 Echo] Craft a Food item</span></label></li>
-        <li><label><input type="checkbox" data-echo="1"><span>[1 Echo] Catch a Fish</span></label></li>
-        <li><label><input type="checkbox" data-echo="1"><span>[1 Echo] Modify a Mantra</span></label></li>
-        <li><label><input type="checkbox" data-echo="1"><span>[1 Echo] Turn in a Pure Ore to a Blacksmith</span></label></li>
-        <li><label><input type="checkbox" data-echo="1"><span>[1 Echo] Win a Chime of Conflict match</span></label></li>
+        <li><label><input type="checkbox" data-id="craft-food" data-echo="1"><span>[1 Echo] Craft a Food item</span></label></li>
+        <li><label><input type="checkbox" data-id="catch-fish" data-echo="1"><span>[1 Echo] Catch a Fish</span></label></li>
+        <li><label><input type="checkbox" data-id="modify-mantra" data-echo="1"><span>[1 Echo] Modify a Mantra</span></label></li>
+        <li><label><input type="checkbox" data-id="pure-ore" data-echo="1"><span>[1 Echo] Turn in a Pure Ore to a Blacksmith</span></label></li>
+        <li><label><input type="checkbox" data-id="chime-win" data-echo="1"><span>[1 Echo] Win a Chime of Conflict match</span></label></li>
 
-        <li><label><input type="checkbox" data-echo="2"><span>[2 Echos] Drink an Attribute Flask</span></label></li>
-        <li><label><input type="checkbox" data-echo="2"><span>[2 Echos] Craft a Master Armor</span></label></li>
-        <li><label><input type="checkbox" data-echo="2"><span>[2 Echos] Use a Deep Shrine</span></label></li>
-        <li><label><input type="checkbox" data-echo="2"><span>[2 Echos] Make a deal with Misérables</span></label></li>
-        <li><label><input type="checkbox" data-echo="2"><span>[2 Echos] Bargain with Yun'Shul</span></label></li>
+        <li><label><input type="checkbox" data-id="attribute-flask" data-echo="2"><span>[2 Echos] Drink an Attribute Flask</span></label></li>
+        <li><label><input type="checkbox" data-id="master-armor" data-echo="2"><span>[2 Echos] Craft a Master Armor</span></label></li>
+        <li><label><input type="checkbox" data-id="deep-shrine" data-echo="2"><span>[2 Echos] Use a Deep Shrine</span></label></li>
+        <li><label><input type="checkbox" data-id="miserables-deal" data-echo="2"><span>[2 Echos] Make a deal with Misérables</span></label></li>
+        <li><label><input type="checkbox" data-id="yunshul-bargain" data-echo="2"><span>[2 Echos] Bargain with Yun'Shul</span></label></li>
 
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Unbound an Attribute</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Obtain an Oath</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Soul-bind an enchanted or legendary item</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Enchant an item with an Enchant Stone or Enchant Grease</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Obtain an enchant from Laplace</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Clear a World Event</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Use a Pluripotent Alloy to alloy a weapon</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Obtain a Murmur</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Defeat the Dread Serpent or Doom of Caeranthil</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Defeat Duke Erisia</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Defeat The Ferryman</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Defeat Chaser, Scholar of the Crimson Contract</span></label></li>
-        <li><label><input type="checkbox" data-echo="5"><span>[5 Echos] Defeat Primadon or Elder Primadon</span></label></li>
+        <li><label><input type="checkbox" data-id="unbound-attribute" data-echo="5"><span>[5 Echos] Unbound an Attribute</span></label></li>
+        <li><label><input type="checkbox" data-id="oath" data-echo="5"><span>[5 Echos] Obtain an Oath</span></label></li>
+        <li><label><input type="checkbox" data-id="soulbind-item" data-echo="5"><span>[5 Echos] Soul-bind an enchanted or legendary item</span></label></li>
+        <li><label><input type="checkbox" data-id="enchant-item" data-echo="5"><span>[5 Echos] Enchant an item with an Enchant Stone or Enchant Grease</span></label></li>
+        <li><label><input type="checkbox" data-id="laplace-enchant" data-echo="5"><span>[5 Echos] Obtain an enchant from Laplace</span></label></li>
+        <li><label><input type="checkbox" data-id="world-event" data-echo="5"><span>[5 Echos] Clear a World Event</span></label></li>
+        <li><label><input type="checkbox" data-id="pluripotent-alloy" data-echo="5"><span>[5 Echos] Use a Pluripotent Alloy to alloy a weapon</span></label></li>
+        <li><label><input type="checkbox" data-id="murmur" data-echo="5"><span>[5 Echos] Obtain a Murmur</span></label></li>
+        <li><label><input type="checkbox" data-id="dread-serpent" data-echo="5"><span>[5 Echos] Defeat the Dread Serpent or Doom of Caeranthil</span></label></li>
+        <li><label><input type="checkbox" data-id="duke-erisia" data-echo="5"><span>[5 Echos] Defeat Duke Erisia</span></label></li>
+        <li><label><input type="checkbox" data-id="ferryman" data-echo="5"><span>[5 Echos] Defeat The Ferryman</span></label></li>
+        <li><label><input type="checkbox" data-id="chaser" data-echo="5"><span>[5 Echos] Defeat Chaser, Scholar of the Crimson Contract</span></label></li>
+        <li><label><input type="checkbox" data-id="primadon" data-echo="5"><span>[5 Echos] Defeat Primadon or Elder Primadon</span></label></li>
 
-        <li><label><input type="checkbox" data-echo="10"><span>[10 Echos] Defeat the Scion of Ethiron</span></label></li>
-        <li><label><input type="checkbox" data-echo="10"><span>[10 Echos] Complete Hell Mode</span></label></li>
-        <li><label><input type="checkbox" data-echo="10"><span>[10 Echos] Complete Layer 2 Floor 1 without a Light Hook</span></label></li>
+        <li><label><input type="checkbox" data-id="scion-ethiron" data-echo="10"><span>[10 Echos] Defeat the Scion of Ethiron</span></label></li>
+        <li><label><input type="checkbox" data-id="hell-mode" data-echo="10"><span>[10 Echos] Complete Hell Mode</span></label></li>
+        <li><label><input type="checkbox" data-id="layer2" data-echo="10"><span>[10 Echos] Complete Layer 2 Floor 1 without a Light Hook</span></label></li>
 
-        <li><label><input type="checkbox" data-echo="15"><span>[15 Echos] Reach Power 20</span></label></li>
-        <li><label><input type="checkbox" data-echo="15"><span>[15 Echos] Obtain a Resonance</span></label></li>
+        <li><label><input type="checkbox" data-id="power20" data-echo="15"><span>[15 Echos] Reach Power 20</span></label></li>
+        <li><label><input type="checkbox" data-id="resonance" data-echo="15"><span>[15 Echos] Obtain a Resonance</span></label></li>
     </ul>
 
 </div>

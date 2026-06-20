@@ -129,3 +129,10 @@ input[type="checkbox"]:checked + span {
 #darkToggle:hover {
     background: #3a56d4;
 }
+
+#nextRankText {
+    text-align: center;
+    font-size: 16px;
+    color: #aaa;
+    margin-top: 5px;
+}
