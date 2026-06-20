@@ -1,10 +1,13 @@
 function updateEchoes() {
     let total = 0;
 
-    document.querySelectorAll('#echoChecklist input[type="checkbox"]').forEach(box => {
+    const checkboxes = document.querySelectorAll('#echoChecklist input[type="checkbox"]');
+
+    checkboxes.forEach((box, index) => {
         if (box.checked) {
             total += Number(box.dataset.echo);
         }
+        localStorage.setItem("echoBox_" + index, box.checked);
     });
 
     document.getElementById('echoTotal').textContent = total;
@@ -35,17 +38,24 @@ function updateEchoes() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.body.classList.add("dark");
-
     const checkboxes = document.querySelectorAll('#echoChecklist input[type="checkbox"]');
 
-    checkboxes.forEach(box => {
+    checkboxes.forEach((box, index) => {
+        const saved = localStorage.getItem("echoBox_" + index);
+
+        if (saved === "true") {
+            box.checked = true;
+        }
+
         box.addEventListener('change', updateEchoes);
     });
 
     document.getElementById('clearBtn').addEventListener('click', () => {
-        checkboxes.forEach(box => {
+        const checkboxes = document.querySelectorAll('#echoChecklist input[type="checkbox"]');
+
+        checkboxes.forEach((box, index) => {
             box.checked = false;
+            localStorage.removeItem("echoBox_" + index);
         });
 
         updateEchoes();
